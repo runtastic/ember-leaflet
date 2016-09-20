@@ -110,7 +110,7 @@ export default Ember.Mixin.create(
   createChildLayer(layerClass, attrs) {
     attrs = attrs || {};
     attrs.container = this.get('container');
-    attrs.controller = this.get('controller');
+    attrs.controller = this;
     attrs._parentLayer = this.isVirtual ? this._parentLayer : this;
     let layerInstance;
     const layerType = Ember.typeOf(layerClass);
